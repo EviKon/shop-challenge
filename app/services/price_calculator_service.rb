@@ -10,13 +10,7 @@ class PriceCalculatorService
   end
 
   def calculate
-    total_price = 0
-
-    items.each do |item|
-      total_price += calculate_items_price(item)
-    end
-  
-    total_price
+    items.sum { |item| calculate_items_price(item) }
   end
 
   private

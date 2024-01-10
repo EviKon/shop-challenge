@@ -41,8 +41,17 @@ RSpec.describe Api::BasketsController, type: :request do
       end
     end
 
-    context 'when param items is not passed' do
-      it 'renders json with error message and status: unprocessable_entity' do
+    context 'when param items are not passed' do
+      it 'renders json with error message and status: bad_request' do
+        
+        post '/api/baskets', params: {}
+        
+        expect(response).to have_http_status(:bad_request)
+      end
+    end
+
+    context 'when quantity is passed as a negative price' do
+      it 'renders json with error message and status: bad_request' do
         
         post '/api/baskets', params: {}
         
