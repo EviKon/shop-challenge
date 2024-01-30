@@ -111,7 +111,7 @@ Project Setup
 In order to set up the project and run it you firstly you need to clone it by running
 
 ```
-git clone https://gitlab.com/evi-kon/shop-challenge.git
+git clone https://github.com/EviKon/shop-challenge.git
 ```
 
 Then you'll need to get to the folder by running
